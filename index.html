@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Someone's Cookie Clicker</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniCraft</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="game-shell">
+    <div class="hud">
+      <div>
+        <h1>MiniCraft 3D</h1>
+        <p class="subtitle">Explore a 3D block world in first-person view.</p>
+      </div>
+      <div class="stats">
+        <span>Selected: <strong id="selected-block">Grass</strong> · Move: WASD</span>
+      </div>
+    </div>
 
-    <main class="game">
-        <h1>🍪 Someone's Cookie Clicker</h1>
+    <canvas id="game" width="960" height="540" aria-label="MiniCraft 3D game"></canvas>
 
-        <p class="subtitle">Click the cookie and collect as many cookies as you can!</p>
+    <div class="inventory" aria-label="Block inventory">
+      <button class="block active" data-block="1">Grass</button>
+      <button class="block" data-block="2">Dirt</button>
+      <button class="block" data-block="3">Stone</button>
+      <button class="block" data-block="4">Wood</button>
+      <button class="block" data-block="5">Leaves</button>
+      <button class="block" data-block="6">Brick</button>
+    </div>
+  </div>
 
-        <h2>
-            Cookies:
-            <span id="score">0</span>
-        </h2>
-
-        <button id="cookieButton" class="cookie-button">
-            🍪
-        </button>
-
-        <p id="message">Start clicking!</p>
-
-        <button id="resetButton" class="reset-button">
-            Reset Game
-        </button>
-    </main>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
